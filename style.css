@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    font-family: "Rubik", sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: calc(100% - 3rem);
+    max-width: 1110px;
+    margin: 82px auto;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+
+
+.user {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}
+
+
+
+.user-information {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+}
+
+.user-data {
+    padding: 35px 0 35px 32px;
+    display: flex;
+    align-items: center;
+}
+
+
+.user-img {
+    width: 64px;
+    height: 64px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+
+.user-img img {
+    object-fit: cover;
+}
+
+.username {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-left: 1.25rem;
+    color: #ffffff;
+}
+
+
+.username span {
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 0.25rem;
+    color: hsl(236, 100%, 87%);
+}
+
+
+    
+
+.tabs {
+    padding: 24px 0 24px;
+    display: flex;
+    align-items: center;
+}
+
+
+.tab {
+    flex: 1;
+    background-color: transparent;
+    border: 0;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 20px;
+    cursor: pointer;
+    color:  hsl(235, 45%, 61%);
+}
+
+.tab.active,
+.tab:hover {
+    color: #ffffff;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 36px 0 0;
+    background-repeat: no-repeat, no-repeat;
+}
+
+
+
+.card.work {
+    background-image: url(../images/icon-work.svg);
+    background-position: top -10px right 16px;
+    
+    background-color: hsl(15, 100%, 70%);
+}
+
+.card.play {
+    background-image: url(../images/icon-play.svg);
+    background-position: top -10px right 16px;
+    
+    background-color: hsl(195, 74%, 62%);
+}
+
+.card.study {
+    background-image: url(../images/icon-study.svg);
+    background-position: top -10px right 16px;
+    
+    background-color: hsl(348, 100%, 68%);
+}
+
+.card.exercise {
+    background-image: url(../images/icon-exercise.svg);
+    background-position: top -10px right 16px;
+    
+    background-color: hsl(145, 58%, 55%);
+}
+ 
+.card.social {
+    background-image: url(../images/icon-social.svg);
+    background-position: top -10px right 16px;
+    
+    background-color: hsl(264, 64%, 52%);
+}
+
+
+.card.self-care {
+    background-image: url(../images/icon-self-care.svg);
+    background-position: top -10px right 16px;
+    
+    background-color: hsl(43, 84%, 65%);
+}
+
+.card-data {
+    background-color:hsl(235, 46%, 20%);
+    border-radius: 15px;
+    padding: 28px 24px;
+    cursor: pointer;
+}
+
+.card-data:hover {
+    background-color: hsl(235, 41%, 34%);
+}
+
+
+.card-title {
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-dot {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-information {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.card-time {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+
+.card-previous-time {
+    font-size: 15px;
+    color: hsl(236, 100%, 87%);
+}
+
+
+@media (min-width: 1200px) {
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        margin: 0 auto;
+    }
+    .cards-grid {
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,auto);
+        gap: 30px;
+    }
+    .user {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+    .user-data {
+        padding: 36px 0 78px 32px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .user-img {
+        width: 80px;
+        height: 80px;
+    }
+    .username {
+        margin-left: 0rem;
+        margin-top: 38px;
+        font-size: 42px;
+        line-height: 44px;
+    }
+    .card {
+        padding: 44px 0 0;
+    }
+    .username span {
+        margin-bottom: 0.188rem;
+        line-height: 18px;
+    }
+    .tabs {
+        padding: 1.625rem 0 2rem 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    } 
+    .card-data {
+        padding: 30px 28px 36px;
+    }
+    .card-information {
+        margin-top: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-time {
+        font-size: 3.5rem;
+        line-height: 62px;
+    }
+    .card-previous-time {
+        margin-top: .5rem;
+    }
+}
+
